@@ -1,0 +1,1793 @@
+/*----------------------Font importeing----------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&family=Work+Sans:wght@400;500;600;700;800;900&display=swap"); 
+
+*, ::after, ::before {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  cursor: default;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  line-height: 1.4;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Oswald, sans-serif;
+}
+
+h1 {
+  font-size: 5.8rem;
+}
+
+h2 {
+  font-size: 4.5rem;
+}
+
+h3 {
+  font-size: 4rem;
+}
+
+h4 {
+  font-size: 3.5rem;
+}
+
+h5 {
+  font-size: 2.5rem;
+}
+
+h6 {
+  font-size: 1.9rem;
+}
+
+p {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.btn {
+  color: rgb(255, 255, 255);
+  background: rgb(255, 82, 0);
+  font-size: 14px;
+  font-weight: 700;
+  outline: none;
+  border: none;
+  border-radius: 0.3rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: block;
+  transition: all 0.3s ease 0s;
+  font-family: "open sans", sans-serif;
+}
+
+.btnHover:hover {
+  background: rgb(37, 37, 37);
+}
+
+.btnBlack {
+  color: rgb(255, 255, 255);
+  background: rgb(37, 37, 37);
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding: 2rem 3.5rem;
+  outline: none;
+  border: none;
+  border-radius: 0.3rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: 2% 0px;
+  display: block;
+  transition: all 0.3s ease 0s;
+  letter-spacing: 0.08em;
+  font-family: Oswald, sans-serif;
+}
+
+.btnBlack:hover {
+  background: rgb(255, 82, 0);
+}
+
+.container {
+  width: 120rem;
+  margin: 0px auto;
+}
+
+section {
+  padding: 5% 0px;
+  overflow: hidden;
+}
+
+.activeLink {
+  color: rgb(255, 82, 0) !important;
+}
+
+.activeBox {
+  background: rgb(255, 82, 0) !important;
+  color: rgb(255, 255, 255) !important;
+}
+
+h2::after {
+  content: "";
+  width: 6rem;
+  height: 0.3rem;
+  position: absolute;
+  left: 49%;
+  background: rgb(255, 82, 0);
+  top: 105%;
+  transform: translate(-49%, -105%);
+  border-radius: 10rem;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnArrow {
+  width: 4rem;
+  height: 4rem;
+  padding-bottom: 0.2rem;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  color: rgb(255, 255, 255);
+  background: rgb(34, 34, 34);
+  text-align: center;
+  cursor: pointer;
+  font-size: 2.5rem;
+  z-index: 99;
+  box-shadow: rgba(68, 73, 83, 0.2) 0px 0.1rem 0.5rem;
+  position: fixed;
+  bottom: 10%;
+  right: 2%;
+  opacity: 0;
+  transition: all 0.3s ease 0s;
+}
+
+.showbtnArrow {
+  opacity: 1;
+}
+
+.btnArrow a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.btnArrow:hover {
+  background: rgb(255, 82, 0);
+}
+
+nav {
+  width: 100%;
+  background: rgb(255, 255, 255);
+  transition: all 300ms ease 0s;
+  padding: 1% 0px 0.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.sticky {
+  top: 0px;
+  width: 100%;
+  z-index: 10;
+  position: sticky;
+  box-shadow: rgba(68, 73, 83, 0.12) 0px 0.1rem 0.5rem;
+}
+
+.header {
+  width: 100%;
+  height: 5rem;
+  margin-bottom: 0%;
+  background: rgb(245, 245, 245);
+  overflow: hidden;
+}
+
+.topIntro {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+}
+
+.phone {
+  display: flex;
+  justify-content: space-around;
+  width: 23%;
+  align-items: center;
+  margin: 0%;
+}
+
+.phone::before {
+  content: "";
+  width: 5rem;
+  height: 5rem;
+  border-right: 0.1rem solid rgb(211, 211, 211);
+  margin-left: -20%;
+}
+
+.phone::after {
+  content: "";
+  width: 5rem;
+  height: 5rem;
+  border-right: 0.1rem solid rgb(211, 211, 211);
+  margin-left: -20%;
+}
+
+.email {
+  display: flex;
+  justify-content: space-around;
+  width: 33%;
+  align-items: center;
+  margin: 1.5% 27.5% 1.5% 0px;
+}
+
+.topIntro i {
+  font-size: 2rem;
+  color: rgb(255, 82, 0);
+}
+
+.topIntro span {
+  font-size: 1.6rem;
+  font-family: "Work Sans", sans-serif;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 10%;
+  margin-left: 3%;
+}
+
+.faceBook, .twittEr, .linkedIn {
+  border-left: 0.1rem solid rgba(211, 211, 211, 0.72);
+  height: 100%;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.linkedIn {
+  border-right: 0.1rem solid rgba(211, 211, 211, 0.72);
+}
+
+.faceBook i.fa.fa-facebook {
+  margin: 155% 0px 0px;
+}
+
+.fa-twitter, .fa-linkedin-square {
+  margin: 97% 0px 0px;
+}
+
+.socialLinks i {
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.socialLinks i:hover {
+  color: rgb(255, 82, 0);
+}
+
+.logo {
+  width: 15%;
+  height: auto;
+  float: left;
+  cursor: pointer;
+}
+
+.logo img {
+  max-width: 100%;
+}
+
+.navLinks {
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 1.3% -3% 0px 0px;
+  cursor: pointer;
+}
+
+.menuLinks {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  align-items: center;
+  margin-right: -6%;
+}
+
+.menuLinks li {
+  list-style-type: none;
+  display: inline;
+}
+
+.subMenuContainer {
+  width: 15%;
+  position: relative;
+}
+
+.menuLinks li:nth-child(5) {
+  margin-right: -5%;
+}
+
+.menuLinks li:nth-child(2) {
+  margin-right: -4%;
+}
+
+.menuLinks li:nth-child(1) {
+  margin-right: -5%;
+}
+
+.menuLinks li:nth-child(6) {
+  margin-right: -3%;
+}
+
+.menuLinks li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-family: Oswald, sans-serif;
+  font-size: 1.5rem;
+  padding-bottom: 80%;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+}
+
+.menuLinks li a:hover {
+  color: rgb(255, 82, 0);
+}
+
+.menuLinks li a i {
+  margin-left: 4px;
+  font-size: 1.5rem;
+}
+
+.menuLinks li:last-child a i {
+  font-size: 2rem;
+}
+
+.subMenu1, .subMenu3, .subMenu4, .subMenu5 {
+  width: 30rem;
+  height: 10rem;
+  background: rgb(255, 255, 255);
+  border-top: 0.1rem solid rgb(229, 229, 229);
+  position: absolute;
+  top: 163%;
+  transform-origin: center top;
+  transition: all 0.3s ease 0s;
+  transform: scaleY(0);
+  z-index: 10;
+}
+
+.subMenu2 {
+  width: 30rem;
+  height: 55rem;
+  background: rgb(255, 255, 255);
+  border-top: 0.1rem solid rgb(229, 229, 229);
+  position: absolute;
+  top: 163%;
+  transform-origin: center top;
+  transition: all 0.5s ease 0s;
+  transform: scaleY(0);
+  z-index: 5;
+}
+
+.subMenu5 {
+  height: 14rem;
+}
+
+.menuLinks li:nth-child(1):hover .subMenu1 {
+  transform: scaleY(1);
+}
+
+.menuLinks li:nth-child(2):hover .subMenu2 {
+  transform: scaleY(1);
+}
+
+.menuLinks li:nth-child(3):hover .subMenu3 {
+  transform: scaleY(1);
+}
+
+.menuLinks li:nth-child(4):hover .subMenu4 {
+  transform: scaleY(1);
+}
+
+.menuLinks li:nth-child(5):hover .subMenu5 {
+  transform: scaleY(1) !important;
+}
+
+.subMenu1 li, .subMenu2 li, .subMenu3 li, .subMenu4 li, .subMenu5 li {
+  display: block;
+  padding-left: 10%;
+  line-height: 1.9;
+  transition: all 0.5s ease 0s;
+}
+
+.subMenu1 li:hover, .subMenu2 li:hover, .subMenu3 li:hover, .subMenu4 li:hover, .subMenu5 li:hover {
+  transform: translateX(1.2rem);
+}
+
+.subMenu1 li:first-child, .subMenu2 li:first-child, .subMenu3 li:first-child, .subMenu4 li:first-child, .subMenu5 li:first-child {
+  padding-top: 5%;
+}
+
+.subMenu1 li a, .subMenu2 li a, .subMenu3 li a, .subMenu4 li a, .subMenu5 li a {
+  text-transform: capitalize;
+  font-family: arial;
+  padding-bottom: 0%;
+}
+
+.subMenu2 li a, .subMenu3 li a, .subMenu4 li a, .subMenu5 li a {
+  font-family: "Work Sans", sans-serif;
+}
+
+.subMenu1 li a:hover, .subMenu2 li a:hover, .subMenu3 li a:hover, .subMenu4 li a:hover, .subMenu5 li a:hover {
+  color: rgb(0, 0, 0);
+}
+
+.subMenu1 li a::before, .subMenu2 li a::before, .subMenu3 li a::before, .subMenu4 li a::before, .subMenu5 li a::before {
+  content: "";
+  height: 0.2rem;
+  width: 0rem;
+  opacity: 1;
+  background-color: rgb(255, 82, 0);
+  transition: all 1.5s ease 0s;
+  margin-right: 1rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.subMenu1 li:hover a::before, .subMenu2 li:hover a::before, .subMenu3 li:hover a::before, .subMenu4 li:hover a::before, .subMenu5 li:hover a::before {
+  width: 2.5rem;
+}
+
+.searchBox {
+  width: 30rem;
+  height: 10rem;
+  background: rgb(255, 255, 255);
+  position: absolute;
+  top: 163%;
+  right: 70%;
+  border-top: 0.3rem solid rgb(255, 82, 0);
+  border-radius: 0.4rem;
+  transition: all 0.3s ease 0s;
+  z-index: 2;
+  visibility: hidden;
+}
+
+.showsearchBox {
+  visibility: visible;
+}
+
+.searchBox form {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1rem;
+  position: relative;
+}
+
+.searchBox input {
+  display: block;
+  width: 80%;
+  height: 4rem;
+  font-size: 1.4rem;
+  border: 0.1rem solid rgb(224, 224, 224);
+  background: rgb(255, 255, 255);
+  outline: none;
+  border-radius: 0.3rem;
+  padding: 2% 5% 2% 2%;
+  font-family: inherit;
+  margin: 8%;
+}
+
+.searchBox .btnSearch {
+  position: absolute;
+  top: 0px;
+  right: 10%;
+  width: 4rem;
+  height: 4rem;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
+  cursor: pointer;
+  background: rgb(255, 82, 0);
+  border: none;
+  outline: none;
+  border-radius: 0.3rem;
+}
+
+.sliderSection1 {
+  width: 100%;
+  height: 100%;
+  padding: 0% 0px;
+}
+
+.sliderSection1 #slide1 {
+  width: 100%;
+  transition: all 1s ease 0s;
+  height: auto;
+}
+
+.sliderContainer {
+  position: absolute;
+  width: 100%;
+  height: 60rem;
+  overflow: hidden;
+}
+
+.sliderText {
+  position: absolute;
+  top: 100px;
+}
+
+.sliderText div:nth-child(1) {
+  width: 50%;
+  height: auto;
+  margin: 8% 5%;
+}
+
+.sliderText h1 {
+  color: rgb(255, 255, 255);
+  font-size: 50px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.sliderText p {
+  width: 65%;
+  color: rgb(255, 255, 255);
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.9;
+}
+
+.btnHero {
+  padding: 1.5rem 2.5rem;
+  margin: 6% 0px;
+}
+
+.dots {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 5%;
+  height: auto;
+  position: absolute;
+  right: 45%;
+  top: 95%;
+  transform: translate(-45%, -90%);
+}
+
+.fa-circle {
+  color: rgb(255, 82, 0);
+  font-size: 2rem;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+.fa-circle-o {
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+.primaryServices {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  background: rgba(245, 246, 246, 0.965);
+}
+
+.primaryServicesBox {
+  height: auto;
+  background: rgb(255, 255, 255);
+  border: 0.1rem solid rgba(219, 219, 219, 0.66);
+  border-radius: 0.3rem;
+  overflow: hidden;
+  transition: all 0.5s ease 0s;
+  width: 270px;
+  margin: 0px 10px;
+  cursor: pointer;
+}
+
+.primaryServicesBox:hover {
+  background: rgb(255, 82, 0);
+}
+
+.primaryServicesBox:nth-child(2) .sboxIcon i, .primaryServicesBox:nth-child(2) .sboxTitle h5, .primaryServicesBox:nth-child(2) .sboxDes p, .primaryServicesBox:nth-child(2) .sboxLink span a {
+  color: rgb(255, 255, 255);
+}
+
+.primaryServicesBox:hover .sboxIcon i, .primaryServicesBox:hover .sboxTitle h5, .primaryServicesBox:hover .sboxDes p, .primaryServicesBox:hover .sboxLink span a {
+  color: rgb(255, 255, 255);
+}
+
+.sboxIcon {
+  padding: 10% 0px 3%;
+  transition: all 0.4s ease 0s;
+}
+
+.sboxIcon i {
+  color: rgb(255, 82, 0);
+  font-size: 4.8rem;
+  transition: all 0.4s ease 0s;
+}
+
+.sboxTitle {
+  padding: 6% 0px 8%;
+  transition: all 0.4s ease 0s;
+}
+
+.sboxTitle h5 {
+  width: 65%;
+  margin: auto;
+  text-transform: uppercase;
+  font-size: 1.9rem;
+  color: rgb(51, 51, 51);
+  cursor: pointer;
+  transition: all 0.4s ease 0s;
+}
+
+.sboxDes {
+  margin: 0px 0px 10%;
+  text-align: center;
+  transition: all 0.4s ease 0s;
+}
+
+.sboxDes p {
+  font-size: 1.7rem;
+  width: 80%;
+  margin: auto;
+  line-height: 2.4rem;
+  color: rgb(101, 101, 101);
+  transition: all 0.4s ease 0s;
+}
+
+.sboxLink {
+  margin: 0px 0px 10%;
+  text-align: center;
+  transition: all 0.4s ease 0s;
+}
+
+.sboxLink span a {
+  color: rgb(255, 82, 0);
+  font-size: 1.7rem;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.4s ease 0s;
+}
+
+.teamSection {
+  width: 100%;
+  height: auto;
+}
+
+.teamImage {
+  width: 50%;
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+
+.teamImage img {
+  max-width: 100%;
+  transition: all 0.3s ease 0s;
+}
+
+.teamImage img:hover {
+  transform: scale(1.12);
+}
+
+.t_flct {
+  width: 100%;
+  display: flex;
+}
+
+.teamText {
+  margin-left: 5%;
+  padding: 0px 24px;
+  text-align: left;
+  width: 95%;
+}
+
+.teamText h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 3.6rem;
+  font-weight: 500;
+  margin: 2% 0px;
+}
+
+.teamText p {
+  text-transform: capitalize;
+  margin: 3% 0px 5%;
+  color: rgb(101, 101, 101);
+}
+
+.teamText ul {
+  list-style: none;
+  margin-bottom: 6%;
+}
+
+.firstFacilities {
+  float: left;
+  margin-right: 8%;
+  width: 50%;
+}
+
+.lastFacilities {
+  width: 50%;
+}
+
+.teamText ul li {
+  text-transform: capitalize;
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: 4.2rem;
+  color: rgb(51, 51, 51);
+  cursor: pointer;
+}
+
+.teamText ul li a i {
+  cursor: pointer;
+  margin: 0px 4% 0px 0px;
+}
+
+.teamText ul li a {
+  text-decoration: none;
+  color: rgb(51, 51, 51);
+  transition: all 0.3s ease 0s;
+  padding-left: 4%;
+}
+
+.teamText ul li a:hover {
+  color: rgb(255, 82, 0);
+}
+
+.blogSection {
+  width: 100%;
+  height: auto;
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)) center center / cover no-repeat, url("../img/customerNum.jpg");
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.blogBox {
+  width: 17%;
+  font-size: 20px;
+  display: block;
+  float: left;
+  margin: 1% 0px 1% 1.6%;
+}
+
+.blogBox:last-child {
+  margin-right: 0%;
+  margin-left: 0%;
+}
+
+.blogBox:first-child {
+  margin-left: 3%;
+}
+
+.blogIcon {
+  text-align: center;
+  margin: 6% 0px;
+}
+
+.blogIcon i {
+  font-size: 4rem;
+}
+
+.blogNumber {
+  font-size: 20px;
+}
+
+.blogNumber h4 {
+  font-size: 3rem;
+  font-family: "Work Sans", sans-serif;
+}
+
+.blogTitle h5 {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.missionSection {
+  width: 100%;
+  height: auto;
+  background: rgb(245, 246, 246);
+}
+
+.missionBox {
+  padding-right: 16px;
+  width: 290px;
+}
+
+.mTitleDes {
+  text-align: center;
+}
+
+.mTitleDes h2 {
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  margin: 0% 0px 2%;
+  padding-bottom: 1%;
+  position: relative;
+}
+
+.mTitleDes p {
+  width: 45%;
+  margin: 0% auto 4%;
+  color: rgb(51, 51, 51);
+  font-family: "Work Sans", sans-serif !important;
+}
+
+.missionImage {
+  overflow: hidden;
+}
+
+.missionImage img {
+  max-width: 100%;
+}
+
+.missionContent {
+  text-align: left;
+  overflow: hidden;
+}
+
+.missionContent h5 {
+  margin: 4% 0px;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.02rem;
+  text-transform: uppercase;
+}
+
+.missionContent p {
+  color: rgb(51, 51, 51);
+  line-height: 2.5rem;
+  font-family: "Work Sans", sans-serif !important;
+}
+
+.priceSection {
+  width: 100%;
+  height: auto;
+}
+
+.pTitleDes {
+  text-align: center;
+}
+
+.pTitleDes h2 {
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  margin: 0% 0px 2%;
+  padding-bottom: 1%;
+  position: relative;
+}
+
+.pTitleDes p {
+  width: 45%;
+  color: rgb(51, 51, 51);
+  margin: auto auto 5%;
+  font-family: "Work Sans", sans-serif !important;
+}
+
+.priceBox {
+  overflow: hidden;
+  border: 0.1rem solid rgb(238, 238, 238);
+  border-radius: 0.5rem;
+  background: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 40px 3px;
+  padding: 3rem;
+}
+
+.priceBox {
+  margin-right: 30px;
+}
+
+.priceBox:last-child {
+  margin-right: 0%;
+}
+
+.priceBox h3 {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 2.6rem;
+  margin: 4% 0px;
+}
+
+.priceBox h3 {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 2.6rem;
+  margin: 4% 0px;
+}
+
+.priceBox b {
+  font-size: 5rem;
+  color: rgb(0, 0, 0);
+}
+
+.priceBox span {
+  font-size: 2rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.priceBox ul {
+  list-style-type: none;
+  margin-bottom: 10%;
+}
+
+.priceBox ul li {
+  color: rgb(87, 100, 124);
+  font-size: 1.6rem;
+  margin: 5% 0px;
+}
+
+.priceBox ul li i {
+  color: rgb(255, 82, 0);
+  font-size: 1rem;
+  margin: 0px 2% 0px 0px;
+}
+
+.priceBox button {
+  width: 100px;
+  font-size: 12px;
+  padding: 10px 0px;
+  margin-bottom: 0px;
+  margin-top: 20px !important;
+}
+
+.ideaSection {
+  width: 100%;
+  position: relative;
+  padding-bottom: 0%;
+  margin-bottom: 5%;
+  overflow: hidden !important;
+}
+
+.ideaImage1 {
+  width: 50%;
+  height: 100%;
+  background: url("../img/idea1.jpg") center center / cover no-repeat;
+  position: absolute;
+  overflow: hidden;
+}
+
+.ideaImage2 {
+  width: 50%;
+  height: 100%;
+  background: url("../img/idea2.jpg") center center / cover no-repeat;
+  position: absolute;
+  overflow: hidden;
+}
+
+.ideaCintainerWrapper {
+  width: 50%;
+  height: 100%;
+  float: right;
+  background: rgb(34, 34, 34);
+  color: rgb(255, 255, 255);
+}
+
+.ideaContainer1 {
+  margin: 5% 0% 7% 5%;
+  width: 100%;
+  height: auto;
+}
+
+.ideaContainer1 h3 {
+  font-size: 3rem;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  line-height: 5.4rem;
+  letter-spacing: 0.02em;
+}
+
+.ideaContainer1 p {
+  width: 90%;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  text-align: left;
+  line-height: 2.7rem;
+  word-spacing: 0.3rem;
+  margin: 2rem 0px;
+}
+
+.worpIdea {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.singleIdea_box i {
+  float: left;
+  font-size: 5rem;
+  color: rgb(255, 82, 0);
+  margin: 1rem 4rem 5rem 0px;
+}
+
+.singleIdea_box h5 {
+  font-size: 2rem;
+  line-height: 1.8;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  letter-spacing: 0.02em;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+.singleIdea_box div:hover h5 {
+  color: rgb(255, 82, 0);
+}
+
+.singleIdea_box p {
+  width: 75%;
+  color: rgb(221, 221, 221);
+  font-size: 16px;
+  line-height: 2.5rem;
+  text-transform: capitalize;
+}
+
+.singleIdea_box {
+  width: 300px;
+  margin-bottom: 30px;
+}
+
+.singleIdea_box:nth-child(1) {
+  margin-left: 30px;
+}
+
+.singleIdea_box:nth-child(3) {
+  margin-left: 30px;
+}
+
+.teamSection {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.teamTitleDes {
+  text-align: center;
+  overflow: hidden;
+}
+
+.teamTitleDes h2 {
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  margin: 0% 0px 2%;
+  padding-bottom: 1%;
+  position: relative;
+}
+
+.teamTitleDes p {
+  width: 45%;
+  color: rgb(51, 51, 51);
+  margin: auto auto 5%;
+  font-family: "Work Sans", sans-serif !important;
+}
+
+.teamBox {
+  overflow: hidden;
+  text-align: center;
+  transition: all 0.3s ease 0s;
+  width: 280px;
+  margin: 0 10px;
+  margin-bottom: 25px;
+}
+
+.innerTeamBox {
+  position: relative;
+}
+
+.innerTeamImage {
+  margin-bottom: 6%;
+}
+
+.innerTeamImage img {
+  max-width: 100%;
+}
+
+.teamSocial {
+  list-style-type: none;
+  position: absolute;
+  top: 70%;
+  left: 25%;
+  transform: translate(-2%, -30%);
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  text-align: center;
+  transition: all 0.3s ease 0s;
+}
+
+.teamSocial li {
+  display: inline-block;
+  padding: 0px 5%;
+  transition: all 0.3s ease 0s;
+}
+
+.teamSocial li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease 0s;
+}
+
+.teamSocial li a i {
+  font-size: 1.5rem;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  padding-top: 25%;
+  transition: all 0.3s ease 0s;
+  opacity: 0;
+}
+
+.teamBox:hover .teamSocial li a i {
+  opacity: 1;
+  transform: translateY(0rem);
+}
+
+.teamSocial li:first-child a i {
+  background: rgb(58, 107, 177);
+  transition: all 0.4s cubic-bezier(0, 0.65, 0.58, 1) 0s;
+  transform: translateY(-8rem);
+}
+
+.teamSocial li:nth-child(2) a i {
+  background: rgb(14, 200, 245);
+  transition: all 0.4s cubic-bezier(0, 0.65, 0.58, 1) 0s;
+  transform: translateY(-6rem);
+}
+
+.teamSocial li:nth-child(3) a i {
+  background: rgb(242, 98, 59);
+  transition: all 0.3s cubic-bezier(0, 0.65, 0.58, 1) 0s;
+  transform: translateY(-4rem);
+}
+
+.teamSocial li:nth-child(4) a i {
+  background: rgb(0, 148, 211);
+  transition: all 0.3s cubic-bezier(0, 0.65, 0.58, 1) 0s;
+  transform: translateY(-2rem);
+}
+
+.teamSocial li:hover a i {
+  background: rgb(255, 255, 255);
+  color: rgb(37, 37, 37);
+}
+
+.teamBox h5 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.teamBox span {
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  font-family: "Work Sans", sans-serif;
+  color: rgb(101, 101, 101);
+}
+
+.teamButton {
+  text-align: center;
+  margin-top: 3%;
+}
+
+.teamButton button {
+  margin: auto;
+  background: rgb(37, 37, 37);
+  transition: all 0.3s ease 0s;
+}
+
+.teamButton button:hover {
+  background: rgb(255, 82, 0);
+}
+
+.projectSection {
+  width: 100%;
+  height: auto;
+  background: rgb(245, 246, 246);
+}
+.project_box {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.projectTitleDes {
+  text-align: center;
+  overflow: hidden;
+}
+
+.projectTitleDes h2 {
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  margin: 0% 0px 2%;
+  padding-bottom: 1%;
+  position: relative;
+}
+
+.projectTitleDes p {
+  width: 45%;
+  color: rgb(51, 51, 51);
+  margin: auto auto 5%;
+  font-family: "Work Sans", sans-serif !important;
+}
+
+.projectBox {
+  overflow: hidden;
+  position: relative;
+  width: 30.26%;
+  margin: 1% 0px 2% 2.6%;
+}
+
+.projectBox:first-child {
+  margin-left: 2%;
+}
+
+.ProjectImage {
+  overflow: hidden;
+}
+
+.ProjectImage img {
+  max-width: 100%;
+}
+
+.projectBox:hover .projectDetail {
+  height: 60%;
+  top: 86.6%;
+}
+
+.projectBox:hover .projectDetail span {
+  opacity: 1;
+  margin-left: 4%;
+  transition: all 0.3s cubic-bezier(0.29, 1.36, 0.58, 1) 0.3s;
+}
+
+.projectDetail {
+  text-align: left;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 88.5%;
+  left: 0%;
+  width: 100%;
+  height: 50%;
+  transform: translate(0%, -81.5%);
+  background: linear-gradient(to top, rgb(0, 0, 0), transparent);
+  transition: all 0.3s ease 0s;
+}
+
+.projectDetail a {
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-left: 4%;
+  font-family: "Work Sans", sans-serif;
+  transition: all 0.3s ease 0s;
+  padding-bottom: 5%;
+}
+
+.projectDetail h5 {
+  font-size: 2rem;
+  line-height: 1.4;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-left: 4%;
+  letter-spacing: 0.02em;
+  transition: all 0.3s ease 0s;
+  padding-bottom: 5%;
+}
+
+.projectDetail span {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-left: -30%;
+  text-transform: capitalize;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.newsSection {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.newsTitleDes {
+  text-align: center;
+  overflow: hidden;
+}
+
+.newsTitleDes h2 {
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  margin: 0% 0px 2%;
+  padding-bottom: 1%;
+  position: relative;
+}
+
+.newsTitleDes p {
+  width: 45%;
+  color: rgb(51, 51, 51);
+  margin: auto auto 5%;
+  font-family: "Work Sans", sans-serif !important;
+}
+
+.newsContainer {
+  overflow: hidden;
+}
+
+.newsBox {
+  border: 0.1rem solid rgb(229, 229, 229);
+  border-radius: 0.3rem;
+  width: 380px;
+  margin: 0 10px;
+}
+
+.newsImage {
+  overflow: hidden;
+}
+
+.newsImage img {
+  max-width: 100%;
+  transition: all 0.3s ease 0s;
+}
+
+.newsImage img:hover {
+  transform: scale(1.05);
+}
+
+.newsText {
+  text-align: left;
+}
+
+.newsText ul {
+  list-style-type: none;
+  margin-top: 5%;
+}
+
+.newsText ul li {
+  display: inline-block;
+  margin: 0px 8%;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  font-family: "Work Sans", sans-serif;
+  position: relative;
+  color: rgb(119, 119, 119);
+}
+
+.newsText ul li:last-child {
+  margin-left: 4%;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+.newsText ul li:last-child:hover {
+  color: rgb(255, 82, 0);
+}
+
+.newsText ul li:last-child::before {
+  content: "";
+  width: 2rem;
+  height: 0.2rem;
+  display: inline-block;
+  background: rgb(255, 82, 0);
+  border-radius: 10rem;
+  position: absolute;
+  top: 50%;
+  left: -35%;
+}
+
+.newsText h3 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: rgb(51, 51, 51);
+  cursor: pointer;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  margin: 5% 8%;
+  transition: all 0.3s ease 0s;
+}
+
+.newsText h3:hover {
+  color: rgb(255, 82, 0);
+}
+
+.newsText p {
+  color: rgb(114, 114, 114);
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 400;
+  margin: 5% 8%;
+}
+
+.newsText span {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: rgb(255, 82, 0);
+  font-family: "Work Sans", sans-serif;
+  margin: 5% 8% 8%;
+  display: block;
+  cursor: pointer;
+}
+
+.subscribeSection {
+  width: 100%;
+  height: auto;
+  color: rgb(255, 255, 255);
+  text-align: left;
+  position: absolute;
+  z-index: 2;
+}
+
+.subscribeContainer {
+  background: rgb(255, 82, 0);
+  color: rgb(255, 255, 255);
+  border: none;
+  height: auto;
+  padding-left: 4rem;
+  padding-bottom: 2rem;
+  border-radius: 0.4rem;
+}
+.sbBox {
+  width: 400px;
+}
+.sbBox h4 {
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  margin: 5% 0px;
+}
+
+#subscribeForm {
+  color: rgb(101, 101, 101);
+  font-size: 1.6rem;
+  font-family: "Work Sans", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  position: relative;
+  border-radius: 1rem;
+}
+
+#subscribeForm input {
+  padding: 1.8rem 6rem 1.8rem 2rem;
+  width: 90%;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  border-radius: 10rem;
+  position: relative;
+}
+
+#subscribeForm button {
+  height: 5rem;
+  padding: 0px 3rem;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 10%;
+  background: rgb(0, 0, 0);
+  text-transform: capitalize;
+  color: rgb(255, 255, 255);
+  min-width: 5rem;
+  border: none;
+  border-radius: 10rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+}
+
+.sbBox p {
+  color: rgb(255, 255, 255);
+  font-size: 1.6rem;
+  line-height: 1.8;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.followIcons {
+  list-style-type: none;
+  margin-top: -10%;
+}
+
+.followIcons li {
+  display: inline-block;
+  padding: 0px 1%;
+}
+
+.followIcons li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.followIcons li a i {
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  width: 4rem;
+  height: 4rem;
+  text-align: center;
+  background: transparent;
+  border: 0.1rem solid rgb(255, 255, 255);
+  border-radius: 50%;
+  padding-top: 25%;
+  transition: all 0.3s ease 0s;
+  padding-right: 4%;
+}
+
+.followIcons li:hover a i {
+  background: rgb(255, 255, 255);
+  color: rgb(37, 37, 37);
+}
+
+/*------------------------------Footer Design----------------------------------*/
+.footerSection {
+  width: 100%;
+  height: auto;
+  text-align: left;
+  background: rgb(26, 26, 26);
+  color: rgb(255, 255, 255);
+  padding-top: 15rem;
+  position: relative;
+  margin-top: 11%;
+}
+
+.footerContainer h4 {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 2rem;
+  line-height: 3.1rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin: 10% 0px;
+}
+
+.footerContainer p {
+  color: rgb(171, 171, 171);
+  font-size: 1.5rem;
+  line-height: 1.5;
+  text-transform: inherit;
+}
+.footerBox {
+  width: 285px;
+  margin: 10px;
+}
+.footerBox:first-child p {
+  margin-bottom: 5%;
+  width: 95%;
+}
+
+.footerIcons {
+  list-style-type: none;
+  margin-bottom: 10%;
+  margin-left: -6%;
+}
+
+.footerIcons li {
+  display: inline-block;
+  padding: 0px 4%;
+}
+
+.footerIcons li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.footerIcons li a i {
+  color: rgb(171, 171, 171);
+  font-size: 1.7rem;
+  transition: all 0.3s ease 0s;
+}
+
+.footerIcons li:hover a i {
+  color: rgb(255, 82, 0);
+}
+
+.footerAdress i, .footerCall i, .footerEmail i {
+  width: 13%;
+  float: left;
+  color: rgb(255, 82, 0);
+  font-size: 2rem;
+}
+
+.footerAdress p, .footerCall p, .footerEmail p {
+  width: 100%;
+  margin-left: 13%;
+  margin-bottom: 8%;
+}
+
+.usefulLinks {
+  list-style-type: none;
+}
+
+.usefulLinks li {
+  padding: 3% 0px;
+  border-bottom: 0.1rem dashed rgba(74, 74, 74, 0.5);
+}
+
+.usefulLinks li:last-child {
+  border-bottom: none;
+}
+
+.usefulLinks li:hover a {
+  color: rgb(255, 82, 0);
+}
+
+.usefulLinks li a {
+  color: rgb(171, 171, 171);
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: "Work Sans", sans-serif;
+  transition: all 0.3s ease 0s;
+}
+
+.usefulLinks li a i {
+  margin-right: 3%;
+}
+
+.leftPost {
+  background: rgba(255, 255, 255, 0.1);
+  width: 23%;
+  margin-right: 5%;
+  border-radius: 0.4rem;
+  padding: 1%;
+  text-align: center;
+  float: left;
+}
+
+.leftPost strong {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: "Work Sans", sans-serif;
+  text-align: center;
+}
+
+.leftPost span {
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  font-family: "Work Sans", sans-serif;
+}
+
+.leftPost .postMonth {
+  font-size: 1.4rem;
+  margin: 0px auto;
+  font-weight: 600;
+}
+
+.leftPost .postYear {
+  font-size: 1.2rem;
+  margin: 0px auto;
+  font-weight: 600;
+}
+
+.rightPost {
+  width: 70%;
+  float: left;
+}
+
+.rightPost h6 {
+  color: rgb(171, 171, 171);
+  font-size: 1.3rem;
+  text-decoration: none;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+.rightPost h6:hover {
+  color: rgb(255, 82, 0);
+}
+
+.rightPostList {
+  list-style-type: none;
+  margin-top: 5%;
+  margin-bottom: 25%;
+}
+
+.rightPostList li {
+  display: inline;
+  color: rgb(123, 123, 123);
+  font-size: 1.3rem;
+  text-transform: capitalize;
+}
+
+.rightPostList li i {
+  margin-right: 2%;
+  color: rgb(171, 171, 171);
+}
+
+.footerLast {
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.1);
+  padding: 1% 0px;
+  display: flex;
+  justify-self: center;
+}
+
+.footerLast .authorLink {
+  color: rgb(255, 82, 0);
+  text-decoration: none;
+}
+
+.footerLast .authorLink:hover {
+  text-decoration: underline;
+}
+.lastFooterBox {
+  width: 50%;
+}
+.lastFooterBox span {
+  color: rgb(171, 171, 171);
+  font-size: 1.5rem;
+}
+
+.lastFooterBox ul {
+  width: 60%;
+  list-style-type: none;
+  float: right;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.lastFooterBox ul li {
+  display: inline-block;
+}
+
+.lastFooterBox ul li a {
+  color: rgb(171, 171, 171);
+  font-size: 1.5rem;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-family: "Work Sans", sans-serif;
+}
+
+.lastFooterBox ul li:first-child a {
+  text-transform: uppercase;
+}
