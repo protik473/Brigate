@@ -1474,6 +1474,7 @@ nav {
   padding-bottom: 2rem;
   border-radius: 0.4rem;
   display:flex;
+  margin-top:-50px;
 }
 .sbBox {
   width: 400px;
